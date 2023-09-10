@@ -1,0 +1,93 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(225,225,225,0.1);
+    backdrop-filter: blur(90px);
+    padding: 10px;
+    z-index: 9999;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    border-radius: 4px;
+    height: 35px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.logo img{
+    height: 100%;
+    width: auto;
+}
+
+.logo:hover{
+    background: rgba(225,225,225,0.2);
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.links a{
+    padding: 10px;
+}
+
+.links a:hover{
+    opacity: 0.8;
+}
+
+.links .active{
+    padding: 10px 15px;
+    background: linear-gradient(120deg, #ff4800 0%, #FDC720 100%);
+    border-radius: 35px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.ico{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .logo span{
+        display: none;
+    }
+    .ico{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        padding: 2px;
+        color: #f1f1f1;
+    }
+    .ico:hover{
+        opacity: 0.8;
+    }
+    .ico svg{
+        width: 25px;
+        height: 25px;
+    }
+    .links{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: none;
+        flex-direction: column;
+        background: #333;
+        z-index: 9999;
+    }
+}

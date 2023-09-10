@@ -1,0 +1,325 @@
+.hero-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    background: radial-gradient(circle at top, rgba(0, 255, 255, 0.188) 5%, rgba(0, 0, 0, 0) 70%), center/cover;
+}
+
+.hero-section .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.hero-section .hero-container h1 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+
+.hero-section .hero-container span:nth-child(2) {
+    background: linear-gradient(45deg, #ff8a00, #f07, #70f, #0fc, #0cf, hsla(0, 0%, 88%, .4)) 0 0 /300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+    text-align: center;
+}
+
+.chip {
+    font-size: 12px;
+    padding: 10px 15px;
+    border: 0.1px solid transparent;
+    background: rgba(225, 225, 225, 0.1);
+    backdrop-filter: blur(90px);
+    border-radius: 35px;
+    white-space: nowrap;
+    width: min-content;
+    position: relative;
+}
+
+.chip::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 0.1px solid transparent;
+    border-radius: 35px;
+    animation: borderPulse 2s infinite;
+}
+
+@keyframes borderPulse {
+
+    0%,
+    100% {
+        border-color: #f39d1270;
+    }
+
+    50% {
+        border-color: #3498db4f;
+    }
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+.hero-section .hero-container p {
+    width: 70%;
+    font-size: 1rem;
+}
+
+.hero-section .hero-container p b {
+    color: #fff;
+}
+
+.hero-card {
+    width: 80vw;
+    height: auto;
+    padding: 40px;
+    border-radius: 10px;
+    background: url(/develop-editor-gradient.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.left-hero-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.chip-holder {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.right-hero-card {
+    width: 100%;
+    height: 100%;
+}
+
+.right-hero-card img {
+    width: 100%;
+    height: auto;
+    background-color: rgba(225, 225, 225, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    transform: translate(10%, 15%);
+}
+
+.hero-card-grid{
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    gap: 40px;
+    width: 80vw;
+    margin: 20px auto;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-card-grid-left, .hero-card-grid-right{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: rgba(225, 225, 225, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-card-grid-right{
+    height: 100%;
+}
+
+.hero-card-grid-left h2 b, .hero-card-grid-right h2 b{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(225, 225, 225, 0.9);
+}
+
+
+.hero-card-grid-left img, .hero-card-grid-right img{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5%;
+    background: rgba(225, 225, 225, 0.9);
+    padding: 20px;
+}
+
+.hero-card-grid-right img{
+    width: max-content;
+    height: 250px;
+}
+
+.hero-card-grid-left img{
+    position: absolute;
+    transform: translate(0%, 0%);
+}
+
+.clients-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.clients-section h2{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.customer-logos{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    overflow: hidden;
+    position: relative;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+.overlay{
+    height: 400px;
+    width: 100%;
+    background: linear-gradient(90deg, #000, rgba(0,0,0,0.1), rgba(0,0,0,0.1), rgba(0,0,0,0.1), rgba(0,0,0,0.1), rgba(0,0,0,0.1), #000);
+    z-index: 99;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    pointer-events: none;
+    border-radius: 15px;
+    right: 0;
+}
+
+.customer-logos img{
+    height: 250px;
+    width: auto;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-section{
+        padding: 10px;
+    }
+    .hero-section .hero-container{
+        width: 100%;
+        gap: 10px;
+    }
+    .hero-section .hero-container h1 {
+        flex-direction: column;
+        font-size: 3rem;
+        width: 100%;
+    }
+    .hero-section .hero-container p{
+        width: 100%;
+    }
+    .hero-card{
+        width: 100%;
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+    .chip-holder{
+        flex-wrap: wrap;
+    }
+    .right-hero-card{
+        margin-top: 5%;
+    }
+    .right-hero-card img{
+        transform: translate(0);
+    }
+    .hero-card-grid{
+        width: 100%;
+        padding: 10px;
+        grid-template-columns: 1fr;
+    }
+    .hero-card-grid-left img{
+        position: initial;
+    }
+    .hero-card-grid-right img{
+        width: 100%;
+        height: auto;
+    }
+    .clients-section{
+        padding: 10px;
+        text-align: center;
+        overflow-x: hidden;
+    }
+    .overlay{
+        height: 200px;
+        display: none;
+    }
+}
